@@ -4,21 +4,30 @@
 
 * First, we need to install the correct working versions of Aleo and SnarkOS
 
-* Download the binary of snarkos from [here](https://github.com/AleoHQ/snarkOS/releases/tag/v2.2.1) based on your operating system. Place the binary in global path for it to be accessible globally. An example command of how to add it to path is given below:
+* Download the binary of snarkos from [here](https://github.com/AleoHQ/snarkOS/releases/download/v2.2.1/aleo-testnet1-v2.2.1-x86_64-apple-darwin.zip) , this one is for MacOS. Place the binary in global path for it to be accessible globally. An example command of how to add it to path is given below:
 
 ```sh
-mv snarkos /Users/shubham/.cargo/bin/snarkos
+mv snarkos /Users/consentsam/.cargo/bin/snarkos
 ```
 
-* Download the binary of leo from [here](https://github.com/AleoHQ/leo/releases/tag/v1.10.0). Place the leo binary in the path too, similar to how it is done above.
-
+* Similarly, Download the binary of leo from [here](https://github.com/AleoHQ/leo/releases/download/v1.10.0/leo-v1.10.0-aarch64-apple-darwin.zip). Place the leo binary in the path too, similar to how it is done above.
+* 
+```sh
+mv leo /Users/consentsam/.cargo/bin/leo
+```
 * Install `tmux`. For MacOS you can use the command below
 
 ```
 brew install tmux
 ```
 
-* Download the devnet script from [here](https://github.com/AleoHQ/snarkOS/blob/testnet3/devnet.sh) and run it to start the development network.
+* Download the devnet script from [here](https://github.com/AleoHQ/snarkOS/blob/testnet3/devnet.sh) by running the command
+```
+wget https://github.com/AleoHQ/snarkOS/blob/testnet3/devnet.sh
+chmod +x devnet.sh
+./devnet.sh
+```
+ and run it to start the development network.
 
 * Once you have started the network, transfer some credits to your developer account public balance. Replace the `DESTINATION_ADDRESS`.
 
